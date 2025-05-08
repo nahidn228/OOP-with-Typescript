@@ -20,6 +20,8 @@ export class Product {
   getStockValue() {
     return this.price * this.quantity;
   }
+
+  //Abstruction
   sell(unit: number): string {
     if (unit > this.quantity) {
       return `${unit - this.quantity} units available for sell`;
