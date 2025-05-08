@@ -20,4 +20,12 @@ export class Product {
   getStockValue() {
     return this.price * this.quantity;
   }
+  sell(unit: number): string {
+    if (unit > this.quantity) {
+      return `${unit - this.quantity} units available for sell`;
+    } else {
+      this.quantity -= unit;
+    }
+    return `${this.name} have been sold ${unit} units `;
+  }
 }
