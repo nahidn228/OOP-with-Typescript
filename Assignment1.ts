@@ -77,3 +77,60 @@ function processValue(value: string | number): number {
 
 console.log(processValue("hello")); // Output: 5
 console.log(processValue(10)); // Output: 20
+
+// Problem: 06
+
+interface Product {
+  name: string;
+  price: number;
+}
+
+function getMostExpensiveProduct(products: Product[]): Product | null {
+  if (products.length === 0) return null;
+
+  let mostExpensiveProduct = products[0];
+  for (let i = 1; i < products.length; i++) {
+    if (products[i].price > mostExpensiveProduct.price) {
+      mostExpensiveProduct = products[i];
+    }
+  }
+  return mostExpensiveProduct;
+}
+
+const products = [
+  { name: "Pen", price: 510 },
+  { name: "Notebook", price: 205 },
+  { name: "Bag", price: 50 },
+  { name: "Bag1", price: 520 },
+];
+
+console.log(getMostExpensiveProduct(products));
+// Output: { name: "Bag", price: 50 }
+
+// Problem: 07
+
+enum Day {
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+  Sunday,
+}
+
+function getDayType(day: Day): string {
+  switch (day) {
+    case Day.Saturday:
+    case Day.Sunday:
+      return "Weekend";
+    default:
+      return "Weekday";
+  }
+}
+
+console.log(getDayType(Day.Saturday)); // "Weekend"
+console.log(getDayType(Day.Monday));   // "Weekday"
+
+
+// Problem: 08
