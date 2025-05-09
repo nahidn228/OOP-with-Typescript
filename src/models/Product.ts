@@ -1,7 +1,8 @@
 //Class constructor
 
 export class Product {
-  id: number;
+  //access Modifier
+  private id: number;
   name: string;
   price: number;
   quantity: number;

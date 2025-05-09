@@ -5,7 +5,7 @@ import { Product } from "./Product";
 export class DigitalProduct extends Product {
   // downloadSizeMb: number;
   constructor(
-    id: number,
+     id: number,
     name: string,
     price: number,
     quantity: number,
