@@ -1,5 +1,5 @@
 
 
-interface Purchasable{
+export interface Purchasable{
   getStockValue():number
 }
