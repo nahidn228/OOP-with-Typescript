@@ -20,3 +20,4 @@ const samplePhysicalProduct = new PhysicalProduct(
 
 console.log(samplePhysicalProduct.getStockValue());
 console.log(sampleProduct.getStockValue());
+console.log(sampleProduct1.getStockValue());
